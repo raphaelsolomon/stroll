@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:stroll/presentation/views/widgets/answer.item.dart';
@@ -88,7 +89,7 @@ class QuestionIndexView extends StatelessWidget {
             bottom: 0,
             child: Container(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height * .43,
+              height: MediaQuery.of(context).size.height * .49,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
@@ -105,7 +106,7 @@ class QuestionIndexView extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  const Gap(50.0),
+                  const Spacer(),
                   SizedBox(
                     height: 95.0,
                     child: Stack(
@@ -133,8 +134,9 @@ class QuestionIndexView extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    child: Text(
+                    child: AutoSizeText(
                       '“Mine is definitely the peace in the morning.”',
+                      maxLines: 2,
                       style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w400,
@@ -208,7 +210,8 @@ class QuestionIndexView extends StatelessWidget {
                         ForwardButton()
                       ],
                     ),
-                  )
+                  ),
+                  const Gap(25.0),
                 ],
               ),
             ),

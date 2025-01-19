@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class AnswerItemWidget extends StatelessWidget {
   final String option;
@@ -47,8 +48,9 @@ class AnswerItemWidget extends StatelessWidget {
           ),
           const Gap(10.0),
           Flexible(
-            child: Text(
+            child: AutoSizeText(
               title,
+              maxLines: 2,
               style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 14.0,
